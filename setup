@@ -1,0 +1,7 @@
+#!/bin/sh
+APPDIR=$(cd $(dirname $0);pwd)
+
+git submodule update --init
+cd $APPDIR/SplatoonProxy
+cpanm -L $APPDIR/local --installdeps .
+

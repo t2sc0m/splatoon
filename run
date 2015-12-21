@@ -1,0 +1,4 @@
+#!/bin/sh
+cd $(cd $(dirname $0);pwd)/SplatoonProxy
+exec 2>&1
+exec plackup -Ilocal/lib/perl5 --port 6905
